@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" fill="none">
+  <!-- Slippery Road Warning Triangle -->
+  <polygon points="50,10 92,85 8,85" fill="#fef08a" stroke="#dc2626" stroke-width="8" stroke-linejoin="round"/>
+  <!-- Car Silhouette -->
+  <rect x="42" y="38" width="16" height="12" rx="2" fill="#0f172a"/>
+  <!-- Sinuous Skid Tracks -->
+  <path d="M40 54C46 58 40 64 46 72" stroke="#0f172a" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M54 54C60 58 54 64 60 72" stroke="#0f172a" stroke-width="3" stroke-linecap="round" fill="none"/>
+</svg>

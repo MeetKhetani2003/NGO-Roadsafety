@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" fill="none">
+  <rect width="1280" height="720" fill="#070f1d"/>
+  <!-- Road Surface Perspective -->
+  <polygon points="0,720 1280,720 900,320 380,320" fill="#0b1729"/>
+  <polygon points="560,340 600,340 590,440 550,440" fill="#f4f7fb" opacity="0.8"/>
+  <polygon points="680,340 720,340 730,440 690,440" fill="#f4f7fb" opacity="0.8"/>
+  
+  <!-- Play Center Graphic -->
+  <circle cx="640" cy="360" r="70" fill="#ff6b1a" stroke="#ffd66b" stroke-width="4"/>
+  <polygon points="625,325 675,360 625,395" fill="#050a13"/>
+
+  <!-- Overlay Text -->
+  <rect x="340" y="490" width="600" height="60" rx="6" fill="#050a13" fill-opacity="0.9" stroke="#ff6b1a" stroke-width="2"/>
+  <text x="640" y="530" font-family="'Anton', sans-serif" font-size="28" fill="#f4f7fb" text-anchor="middle" letter-spacing="1">SURAKSHA SETU · CERTIFIED ROAD SAFETY TRAINING</text>
+</svg>

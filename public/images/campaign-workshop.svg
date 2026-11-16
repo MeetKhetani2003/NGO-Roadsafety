@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" fill="none">
+  <rect width="600" height="360" fill="#070f1d"/>
+  <!-- Junction Workshop Graphic -->
+  <circle cx="300" cy="180" r="120" fill="#0b1729" stroke="#ffc53d" stroke-width="2"/>
+  <!-- Right-Left-Right Scan Arrows -->
+  <path d="M220 180H380" stroke="#f4f7fb" stroke-width="4" stroke-dasharray="8,6"/>
+  <!-- Look Right Arrow -->
+  <path d="M300 140C340 140 370 160 370 180" stroke="#10b981" stroke-width="5" stroke-linecap="round"/>
+  <!-- Look Left Arrow -->
+  <path d="M300 220C260 220 230 200 230 180" stroke="#ff6b1a" stroke-width="5" stroke-linecap="round"/>
+  <!-- Center Eye / Vigilance Symbol -->
+  <circle cx="300" cy="180" r="24" fill="#070f1d" stroke="#38bdf8" stroke-width="3"/>
+  <circle cx="300" cy="180" r="10" fill="#ffd66b"/>
+  <text x="300" y="325" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#f4f7fb" text-anchor="middle">RIGHT · LEFT · RIGHT SCAN</text>
+</svg>

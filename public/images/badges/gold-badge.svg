@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" fill="none">
+  <!-- Gold Distinction Road Safety Badge -->
+  <circle cx="50" cy="50" r="44" fill="#14263f" stroke="#ffd66b" stroke-width="3"/>
+  <circle cx="50" cy="50" r="38" fill="url(#goldGrad)" stroke="#ffc53d" stroke-width="1.5"/>
+  <defs>
+    <radialGradient id="goldGrad" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="60%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#854d0e"/>
+    </radialGradient>
+  </defs>
+  <!-- Trophy icon in center -->
+  <path d="M35 34H65V46C65 54 58 60 50 60C42 60 35 54 35 46V34Z" fill="#ffffff" stroke="#713f12" stroke-width="1.5"/>
+  <path d="M35 38H27C24.5 38 23 40.5 24 43C25.5 47 29 50 35 50" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  <path d="M65 38H73C75.5 38 77 40.5 76 43C74.5 47 71 50 65 50" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  <path d="M46 60H54V69H46V60Z" fill="#ffffff"/>
+  <rect x="36" y="69" width="28" height="6" rx="2" fill="#ffffff"/>
+  <polygon points="50,22 53,28 59,29 55,34 56,40 50,37 44,40 45,34 41,29 47,28" fill="#ffd66b"/>
+</svg>

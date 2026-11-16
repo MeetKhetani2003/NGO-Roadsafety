@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" fill="none">
+  <rect width="600" height="360" fill="#070f1d"/>
+  <!-- Video Display Screen Frame -->
+  <rect x="100" y="50" width="400" height="240" rx="10" fill="#0b1729" stroke="#38bdf8" stroke-width="2"/>
+  <!-- Video Play Button & Waveform -->
+  <circle cx="300" cy="160" r="45" fill="#ff6b1a" stroke="#ffd66b" stroke-width="3"/>
+  <polygon points="290,140 320,160 290,180" fill="#070f1d"/>
+  <!-- Time Track bar -->
+  <rect x="130" y="250" width="340" height="8" rx="4" fill="#1e293b"/>
+  <rect x="130" y="250" width="180" height="8" rx="4" fill="#38bdf8"/>
+  <circle cx="310" cy="254" r="7" fill="#ffd66b"/>
+  <!-- Timer Indicator -->
+  <text x="300" y="225" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#f4f7fb" text-anchor="middle">15:00 TIMED BATCH</text>
+</svg>

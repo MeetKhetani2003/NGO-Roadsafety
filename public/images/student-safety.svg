@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450" fill="none">
+  <defs>
+    <linearGradient id="bgG" x1="300" y1="0" x2="300" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0f1e34"/>
+      <stop offset="100%" stop-color="#070f1d"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" rx="12" fill="url(#bgG)" stroke="#1d3455" stroke-width="2"/>
+  
+  <!-- Certificate & Shield Motif -->
+  <circle cx="300" cy="170" r="90" fill="#0b1729" stroke="#ff6b1a" stroke-width="3"/>
+  <path d="M300 110L240 140V190C240 230 265 260 300 270C335 260 360 230 360 190V140L300 110Z" fill="#ff6b1a" opacity="0.85"/>
+  <path d="M280 185L295 200L325 170" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Student Road Champions Badge -->
+  <rect x="150" y="290" width="300" height="40" rx="4" fill="#070f1d" stroke="#ffc53d" stroke-width="1.5"/>
+  <text x="300" y="315" font-family="'Anton', sans-serif" font-size="18" fill="#ffd66b" text-anchor="middle" letter-spacing="1">SURAKSHA SETU · LMS PORTAL</text>
+
+  <!-- Features list -->
+  <g transform="translate(140, 360)">
+    <circle cx="10" cy="10" r="4" fill="#10b981"/>
+    <text x="25" y="14" font-family="'JetBrains Mono', monospace" font-size="11" fill="#f4f7fb" opacity="0.8">Timed Video Training</text>
+
+    <circle cx="170" cy="10" r="4" fill="#ff6b1a"/>
+    <text x="185" y="14" font-family="'JetBrains Mono', monospace" font-size="11" fill="#f4f7fb" opacity="0.8">30-Question Exam</text>
+  </g>
+</svg>

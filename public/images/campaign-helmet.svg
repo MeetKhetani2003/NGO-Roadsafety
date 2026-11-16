@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" fill="none">
+  <rect width="600" height="360" fill="#070f1d"/>
+  <!-- Helmet Clinic Graphic -->
+  <circle cx="300" cy="180" r="140" fill="#0f1e34" stroke="#ff6b1a" stroke-width="2" stroke-opacity="0.4"/>
+  <!-- Large Safety Helmet Profile -->
+  <path d="M210 180C210 120 240 85 310 85C380 85 410 125 410 180C410 225 390 250 365 250H270L220 230C212 215 210 198 210 180Z" fill="#ff6b1a"/>
+  <!-- Visor -->
+  <path d="M295 130H385C395 150 395 190 380 205H290C280 180 282 150 295 130Z" fill="#070f1d"/>
+  <!-- Chinstrap -->
+  <path d="M275 245L285 285L325 285L335 245" stroke="#f4f7fb" stroke-width="6" stroke-linecap="round"/>
+  <!-- Checkmark Badge -->
+  <circle cx="390" cy="230" r="30" fill="#10b981" stroke="#070f1d" stroke-width="4"/>
+  <path d="M378 230L386 238L402 222" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
