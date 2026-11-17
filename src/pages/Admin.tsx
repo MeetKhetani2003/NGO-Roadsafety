@@ -43,11 +43,13 @@ import {
 import { store, type Slot, type School, type Student, type Volunteer, type SlotArchive, type AuditLog } from "@/lib/store";
 import { formatClock, formatDate, formatDateTime } from "@/lib/format";
 import { Badge } from "@/components/ui";
+import { useSession } from "@/lib/session";
 
 type AdminTab = "overview" | "slots" | "schools" | "students" | "volunteers" | "pipeline" | "audit";
 
 export default function Admin() {
   const navigate = useNavigate();
+  const { logout } = useSession();
   const [tab, setTab] = useState<AdminTab>("overview");
   const [session, setSession] = useState(() => store.getStaffSession());
 
@@ -81,9 +83,9 @@ export default function Admin() {
     return () => clearInterval(timer);
   }, []);
 
-  const handleLogout = () => {
-    store.setStaffSession(null, null);
-    navigate("/login");
+  const handleLogout = async () => {
+    await logout();
+    navigate("/login", { replace: true });
   };
 
   // Pipeline Module H: Finalize slot, download Excel, dispatch email, and purge

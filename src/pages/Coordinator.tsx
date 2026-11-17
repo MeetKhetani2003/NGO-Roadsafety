@@ -19,9 +19,11 @@ import {
 import { store, type School, type Slot, type Student } from "@/lib/store";
 import { formatDate } from "@/lib/format";
 import { Badge, SiteFooter, SiteHeader } from "@/components/ui";
+import { useSession } from "@/lib/session";
 
 export default function Coordinator() {
   const navigate = useNavigate();
+  const { logout } = useSession();
   const [schools, setSchools] = useState<School[]>([]);
   const [selectedSchoolId, setSelectedSchoolId] = useState<string>("");
   const [copied, setCopied] = useState(false);
@@ -45,9 +47,9 @@ export default function Coordinator() {
     ? (completedAttempts.reduce((sum, a) => sum + (a.score || 0), 0) / completedAttempts.length).toFixed(1)
     : "0";
 
-  const handleLogout = () => {
-    store.setStaffSession(null, null);
-    navigate("/login");
+  const handleLogout = async () => {
+    await logout();
+    navigate("/login", { replace: true });
   };
 
   if (!school) {

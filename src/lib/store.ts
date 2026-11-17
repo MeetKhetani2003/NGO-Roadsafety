@@ -637,6 +637,17 @@ class AppStore {
     this.activeStaffEmail = email;
     save("active_staff_role", role);
     save("active_staff_email", email);
+    if (role) {
+      save("session_staff", {
+        id: role === "admin" ? "u-admin" : "u-coord",
+        name: role === "admin" ? "Super Admin" : "School Coordinator",
+        email: email || (role === "admin" ? "admin@surakshasetu.org" : "meera@greenvalley.edu.in"),
+        role,
+        schoolId: role === "coordinator" ? "sch-1" : null,
+      });
+    } else {
+      save("session_staff", null);
+    }
   }
 
   registerStudent(data: {

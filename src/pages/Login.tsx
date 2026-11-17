@@ -3,49 +3,51 @@ import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, GraduationCap, Lock, Mail, ShieldCheck, UserCheck } from "lucide-react";
 import { store } from "@/lib/store";
+import { useSession } from "@/lib/session";
 
 export default function Login() {
   const navigate = useNavigate();
+  const { loginStaff } = useSession();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const performLogin = async (role: "admin" | "coordinator", em: string) => {
+    await loginStaff(role, em);
+    navigate(role === "admin" ? "/admin" : "/coordinator", { replace: true });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
     const em = email.trim().toLowerCase();
 
     if (em === "admin@surakshasetu.org" && password === "admin123") {
-      store.setStaffSession("admin", em);
-      navigate("/admin");
+      await performLogin("admin", em);
       return;
     }
 
     if (em === "meera@greenvalley.edu.in" && password === "teacher123") {
-      store.setStaffSession("coordinator", em);
-      navigate("/coordinator");
+      await performLogin("coordinator", em);
       return;
     }
 
     // Friendly demo auto-routing
     if (em.includes("admin")) {
-      store.setStaffSession("admin", em);
-      navigate("/admin");
+      await performLogin("admin", em);
       return;
     }
 
     if (em.includes("teacher") || em.includes("coordinator")) {
-      store.setStaffSession("coordinator", em);
-      navigate("/coordinator");
+      await performLogin("coordinator", em);
       return;
     }
 
     setError("Invalid credentials. Please use the 1-click evaluation buttons below.");
   };
 
-  const quickLogin = (em: string, pass: string, role: "admin" | "coordinator") => {
-    store.setStaffSession(role, em);
-    navigate(role === "admin" ? "/admin" : "/coordinator");
+  const quickLogin = async (em: string, _pass: string, role: "admin" | "coordinator") => {
+    await performLogin(role, em);
   };
 
   return (

@@ -47,7 +47,15 @@ function setStorage<T>(key: string, value: T): void {
 export function getMockStudent(): PortalStudent | null {
   const saved = getStorage<PortalStudent | null>(STORAGE_KEY_STUDENT, null);
   if (saved) return saved;
-  // Default to demo student 1 for quick evaluation
+  try {
+    const code = localStorage.getItem("suraksha_active_student_code");
+    const parsedCode = code ? JSON.parse(code) : "RS-DEMO01";
+    if (parsedCode && MOCK_STUDENTS[parsedCode]) {
+      return { ...MOCK_STUDENTS[parsedCode] };
+    }
+  } catch {
+    // ignore
+  }
   return {
     ...MOCK_STUDENTS["RS-DEMO01"],
   };
@@ -55,14 +63,44 @@ export function getMockStudent(): PortalStudent | null {
 
 export function setMockStudent(student: PortalStudent | null): void {
   setStorage(STORAGE_KEY_STUDENT, student);
+  try {
+    localStorage.setItem("suraksha_active_student_code", JSON.stringify(student?.accessCode ?? null));
+  } catch {
+    // ignore
+  }
 }
 
 export function getMockStaff(): Staff | null {
-  return getStorage<Staff | null>(STORAGE_KEY_STAFF, null);
+  const saved = getStorage<Staff | null>(STORAGE_KEY_STAFF, null);
+  if (saved) return saved;
+  try {
+    const role = localStorage.getItem("suraksha_active_staff_role");
+    const parsedRole = role ? JSON.parse(role) : null;
+    const email = localStorage.getItem("suraksha_active_staff_email");
+    const parsedEmail = email ? JSON.parse(email) : null;
+    if (parsedRole) {
+      return {
+        id: parsedRole === "admin" ? "u-admin" : "u-coord",
+        name: parsedRole === "admin" ? "Super Admin" : "School Coordinator",
+        email: parsedEmail || (parsedRole === "admin" ? "admin@surakshasetu.org" : "meera@greenvalley.edu.in"),
+        role: parsedRole,
+        schoolId: parsedRole === "coordinator" ? "sch-1" : null,
+      };
+    }
+  } catch {
+    // ignore
+  }
+  return null;
 }
 
 export function setMockStaff(staff: Staff | null): void {
   setStorage(STORAGE_KEY_STAFF, staff);
+  try {
+    localStorage.setItem("suraksha_active_staff_role", JSON.stringify(staff?.role ?? null));
+    localStorage.setItem("suraksha_active_staff_email", JSON.stringify(staff?.email ?? null));
+  } catch {
+    // ignore
+  }
 }
 
 /* ------------------- Slot State ------------------- */
